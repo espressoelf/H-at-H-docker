@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-slim
+FROM openjdk:11-jre-slim
 
 ARG HatH_VERSION=1.6.1
 ARG HatH_SHA256=b8889b2c35593004be061064fcb6d690ff8cbda9564d89f706f7e3ceaf828726
