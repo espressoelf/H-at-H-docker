@@ -17,7 +17,13 @@ if [ $HatH_KEY ]
 		fi
 fi
 
+port=''
+if [ $HatH_PORT ]
+  then
+    port="--port=$HatH_PORT"
+fi
+
 trap 'kill_jar' TERM INT KILL
-java -jar HentaiAtHome.jar $HatH_ARGS  &
+java -jar HentaiAtHome.jar $HatH_ARGS $port &
 
 wait $!
