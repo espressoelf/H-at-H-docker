@@ -9,7 +9,7 @@ ADD https://repo.e-hentai.org/hath/HentaiAtHome_$HatH_VERSION.zip .
 
 RUN apt update \
     && apt install -y unzip sqlite3 \
-    && rm /var/lib/apt/lists/* \
+    && rm -r /var/lib/apt/lists/* \
     && echo -n ""$HatH_SHA256" HentaiAtHome_$HatH_VERSION.zip" | sha256sum -c \
     && unzip HentaiAtHome_$HatH_VERSION.zip \
     && rm HentaiAtHome_$HatH_VERSION.zip \
