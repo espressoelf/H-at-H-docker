@@ -17,7 +17,7 @@ RUN apk --no-cache add unzip \
     && mkdir -p /hath/data \
     && mkdir -p /hath/download
 
-FROM openjdk:8-jre-alpine AS release
+FROM openjdk:8-jre-slim AS release
 
 ENV HatH_ARGS --cache-dir=/hath/data/cache --data-dir=/hath/data/data --download-dir=/hath/download --log-dir=/hath/data/log --temp-dir=/hath/data/temp
 
