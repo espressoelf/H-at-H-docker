@@ -18,6 +18,7 @@ RUN apt update \
     && chmod +x start.sh
 
 ENV HatH_ARGS --cache-dir=/hath/data/cache --data-dir=/hath/data/data --download-dir=/hath/download --log-dir=/hath/data/log --temp-dir=/hath/data/temp
+VOLUME /hath/data /hath/download
 
 CMD ["/hath/start.sh"]
 
